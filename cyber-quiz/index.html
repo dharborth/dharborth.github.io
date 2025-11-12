@@ -1,1 +1,231 @@
-echo '<!DOCTYPE html><html><body><h1>Test</h1></body></html>' > cyber-quiz/index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Leadership Game</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background: #667eea; min-height: 100vh; padding: 20px; }
+        .container { max-width: 1000px; margin: 0 auto; background: white; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+        header { background: #1E3A8A; color: white; padding: 40px 20px; text-align: center; }
+        header h1 { font-size: 2em; margin-bottom: 10px; }
+        .content { padding: 40px 20px; }
+        section { margin-bottom: 40px; }
+        h2 { color: #1E3A8A; border-bottom: 3px solid #667eea; padding-bottom: 10px; margin-bottom: 20px; }
+        .poll-question { background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px; display: none; }
+        .poll-question.active { display: block; }
+        .poll-option { padding: 10px; margin: 10px 0; background: #f0f4ff; border-radius: 6px; cursor: pointer; }
+        .poll-option:hover { background: #e0e8ff; }
+        .explanation { background: #fff3cd; padding: 15px; border-radius: 6px; margin-top: 15px; color: #856404; border-left: 4px solid #ffc107; }
+        button { background: #667eea; color: white; border: none; padding: 12px 30px; border-radius: 6px; cursor: pointer; margin: 10px 5px 10px 0; }
+        button:hover { background: #5568d3; }
+        .budget-category { background: #f8f9fa; padding: 20px; margin-bottom: 20px; border-radius: 8px; }
+        .budget-category h4 { color: #1E3A8A; margin-bottom: 10px; }
+        input[type="number"] { padding: 10px; border: 2px solid #ddd; border-radius: 4px; width: 150px; }
+        .budget-total { background: #e8f4f8; padding: 15px; border-radius: 6px; font-weight: bold; margin: 20px 0; }
+        .results-container { display: none; background: #f0f4ff; padding: 30px; border-radius: 8px; margin-top: 30px; border: 3px solid #667eea; }
+        .results-container.show { display: block; }
+        .risk-score { font-size: 2.5em; text-align: center; padding: 20px; background: #1E3A8A; color: white; border-radius: 8px; margin-bottom: 20px; }
+        .risk-score.low { background: #28a745; }
+        .risk-score.medium { background: #ffc107; color: #000; }
+        .risk-score.high { background: #dc3545; }
+        .feedback-item { padding: 15px; margin: 15px 0; border-radius: 6px; border-left: 5px solid; }
+        .feedback-item.good { background: #d4edda; border-color: #28a745; color: #155724; }
+        .feedback-item.warning { background: #fff3cd; border-color: #ffc107; color: #856404; }
+        .feedback-item.critical { background: #f8d7da; border-color: #dc3545; color: #721c24; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background: #1E3A8A; color: white; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎮 Cybersecurity Leadership Game</h1>
+            <p>Interactive Budget Allocation & Leadership Quiz</p>
+        </header>
+
+        <div class="content">
+            <!-- POLLING SECTION -->
+            <section>
+                <h2>📊 Leadership Awareness Quiz</h2>
+
+                <div class="poll-question active" id="poll-1">
+                    <h3>Question 1 of 3: What percentage of cyberattacks target SMEs in Germany?</h3>
+                    <div class="poll-option"><input type="radio" name="q1" value="20"> 20%</div>
+                    <div class="poll-option"><input type="radio" name="q1" value="43"> 43%</div>
+                    <div class="poll-option"><input type="radio" name="q1" value="80"> 80% ✓</div>
+                    <div class="poll-option"><input type="radio" name="q1" value="99"> 99%</div>
+                    <button onclick="submitPoll(1)">Submit Answer</button>
+                    <div id="result-1"></div>
+                </div>
+
+                <div class="poll-question" id="poll-2">
+                    <h3>Question 2 of 3: What budget percentage should SMEs allocate to cybersecurity?</h3>
+                    <div class="poll-option"><input type="radio" name="q2" value="1-5"> 1-5%</div>
+                    <div class="poll-option"><input type="radio" name="q2" value="5-10"> 5-10%</div>
+                    <div class="poll-option"><input type="radio" name="q2" value="15-20"> 15-20% ✓</div>
+                    <div class="poll-option"><input type="radio" name="q2" value="25-30"> 25-30%</div>
+                    <button onclick="submitPoll(2)">Submit Answer</button>
+                    <div id="result-2"></div>
+                </div>
+
+                <div class="poll-question" id="poll-3">
+                    <h3>Question 3 of 3: Who is primarily responsible for cybersecurity?</h3>
+                    <div class="poll-option"><input type="radio" name="q3" value="IT"> IT Department</div>
+                    <div class="poll-option"><input type="radio" name="q3" value="CEO"> CEO/Top Management ✓</div>
+                    <div class="poll-option"><input type="radio" name="q3" value="CISO"> CISO alone</div>
+                    <div class="poll-option"><input type="radio" name="q3" value="Board"> Board only</div>
+                    <button onclick="submitPoll(3)">Submit Answer</button>
+                    <div id="result-3"></div>
+                </div>
+
+                <button class="secondary" onclick="resetPolls()">Reset Quiz</button>
+            </section>
+
+            <!-- BUDGET GAME SECTION -->
+            <section>
+                <h2>💰 Budget Allocation Game</h2>
+                <p>You have €100,000 to allocate. Find the optimal balance for lowest risk score!</p>
+
+                <div class="budget-category">
+                    <h4>1. Employee Training & Awareness</h4>
+                    <label>Amount: €<input type="number" id="training" min="0" max="100000" step="1000" value="22000" onchange="updateBudget()"></label>
+                    <p>Recommended: 20-25% | Current avg: 10-15%</p>
+                </div>
+
+                <div class="budget-category">
+                    <h4>2. Security Tools & Technology</h4>
+                    <label>Amount: €<input type="number" id="tools" min="0" max="100000" step="1000" value="38000" onchange="updateBudget()"></label>
+                    <p>Recommended: 35-40% | Current avg: 40-45%</p>
+                </div>
+
+                <div class="budget-category">
+                    <h4>3. Incident Response Planning</h4>
+                    <label>Amount: €<input type="number" id="ir" min="0" max="100000" step="1000" value="18000" onchange="updateBudget()"></label>
+                    <p>Recommended: 15-20% | Current avg: 5-10%</p>
+                </div>
+
+                <div class="budget-category">
+                    <h4>4. External Expertise</h4>
+                    <label>Amount: €<input type="number" id="expertise" min="0" max="100000" step="1000" value="12000" onchange="updateBudget()"></label>
+                    <p>Recommended: 20-25% | Current avg: 15-20%</p>
+                </div>
+
+                <div class="budget-category">
+                    <h4>5. Cloud Security & Backups</h4>
+                    <label>Amount: €<input type="number" id="backups" min="0" max="100000" step="1000" value="10000" onchange="updateBudget()"></label>
+                    <p>Recommended: 15-20% | Current avg: 10-15%</p>
+                </div>
+
+                <div class="budget-total">
+                    Total Allocated: €<span id="total">100000</span>
+                </div>
+
+                <button onclick="calculateRisk()">📊 Calculate Risk Profile</button>
+
+                <div class="results-container" id="results">
+                    <h3>Your Risk Assessment</h3>
+                    <div class="risk-score" id="risk-score">Risk Score: 25</div>
+                    <div id="feedback"></div>
+                    <table>
+                        <thead>
+                            <tr><th>Category</th><th>Your Amount</th><th>German Avg</th><th>Optimal</th></tr>
+                        </thead>
+                        <tbody id="comparison"></tbody>
+                    </table>
+                    <button onclick="resetGame()">Reset & Try Again</button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        const answers = { 1: "80", 2: "15-20", 3: "CEO" };
+        const explanations = {
+            1: "80% of ransomware attacks target SMEs. They have valuable data but weaker defenses.",
+            2: "German SMEs spend only 1-10%, far below the recommended 15-20%.",
+            3: "Leadership drives strategy, resources, and culture. This is their responsibility."
+        };
+
+        function submitPoll(num) {
+            const selected = document.querySelector(`input[name="q${num}"]:checked`);
+            if (!selected) { alert("Select an answer!"); return; }
+            const correct = selected.value === answers[num];
+            document.getElementById(`result-${num}`).innerHTML = `<div class="explanation"><strong>${correct ? '✅ CORRECT!' : '❌ Incorrect'}</strong><br>Answer: ${answers[num]}<br>${explanations[num]}</div>`;
+            if (num < 3) setTimeout(() => { document.getElementById(`poll-${num}`).classList.remove('active'); document.getElementById(`poll-${num+1}`).classList.add('active'); }, 1500);
+        }
+
+        function resetPolls() {
+            document.querySelectorAll('input[type="radio"]').forEach(r => r.checked = false);
+            document.querySelectorAll('[id^="result-"]').forEach(r => r.innerHTML = '');
+            document.querySelectorAll('.poll-question').forEach(q => q.classList.remove('active'));
+            document.getElementById('poll-1').classList.add('active');
+        }
+
+        function updateBudget() {
+            const t = parseFloat(document.getElementById('training').value) || 0;
+            const to = parseFloat(document.getElementById('tools').value) || 0;
+            const ir = parseFloat(document.getElementById('ir').value) || 0;
+            const ex = parseFloat(document.getElementById('expertise').value) || 0;
+            const b = parseFloat(document.getElementById('backups').value) || 0;
+            document.getElementById('total').textContent = (t + to + ir + ex + b).toLocaleString();
+        }
+
+        function calculateRisk() {
+            const t = parseFloat(document.getElementById('training').value) || 0;
+            const to = parseFloat(document.getElementById('tools').value) || 0;
+            const ir = parseFloat(document.getElementById('ir').value) || 0;
+            const ex = parseFloat(document.getElementById('expertise').value) || 0;
+            const b = parseFloat(document.getElementById('backups').value) || 0;
+
+            let score = 25;
+            // Training scoring (optimal 22000)
+            if (t < 18000) score += 15; else if (t < 20000) score += 10; else if (t > 26000) score += 5;
+            // Tools scoring (optimal 38000)
+            if (to < 31000) score += 10; else if (to > 45000) score += 5;
+            // IR scoring (optimal 18000)
+            if (ir < 13000) score += 18; else if (ir < 15000) score += 12; else if (ir < 17000) score += 3;
+            // Expertise scoring (optimal 12000)
+            if (ex < 8000) score += 12; else if (ex > 18000) score += 5;
+            // Backups scoring (optimal 10000)
+            if (b < 7000) score += 18; else if (b < 9000) score += 8;
+
+            score = Math.max(15, Math.min(99, score));
+
+            let riskLevel = score > 70 ? 'high' : score > 45 ? 'medium' : 'low';
+            document.getElementById('risk-score').textContent = `Risk Score: ${score}`;
+            document.getElementById('risk-score').className = `risk-score ${riskLevel}`;
+
+            let feedback = '';
+            if (t < 20000) feedback += '<div class="feedback-item critical">🔴 Training is critically underfunded!</div>';
+            if (ir < 15000) feedback += '<div class="feedback-item critical">🔴 Incident Response too low - NIS2 compliance risk!</div>';
+            if (b < 9000) feedback += '<div class="feedback-item critical">🔴 Ransomware protection insufficient!</div>';
+            if (t >= 20000 && ir >= 15000 && b >= 9000) feedback += '<div class="feedback-item good">✅ Good balance across critical areas!</div>';
+
+            document.getElementById('feedback').innerHTML = feedback;
+
+            let comp = `<tr><td>Training</td><td>€${t.toLocaleString()}</td><td>€12,000</td><td>€22,000</td></tr>
+                       <tr><td>Tools</td><td>€${to.toLocaleString()}</td><td>€42,000</td><td>€38,000</td></tr>
+                       <tr><td>Incident Response</td><td>€${ir.toLocaleString()}</td><td>€8,000</td><td>€18,000</td></tr>
+                       <tr><td>Expertise</td><td>€${ex.toLocaleString()}</td><td>€18,000</td><td>€12,000</td></tr>
+                       <tr><td>Backups</td><td>€${b.toLocaleString()}</td><td>€12,000</td><td>€10,000</td></tr>`;
+            document.getElementById('comparison').innerHTML = comp;
+            document.getElementById('results').classList.add('show');
+        }
+
+        function resetGame() {
+            document.getElementById('training').value = 22000;
+            document.getElementById('tools').value = 38000;
+            document.getElementById('ir').value = 18000;
+            document.getElementById('expertise').value = 12000;
+            document.getElementById('backups').value = 10000;
+            updateBudget();
+            document.getElementById('results').classList.remove('show');
+        }
+
+        updateBudget();
+    </script>
+</body>
+</html>
