@@ -1,0 +1,861 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.1">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Cybersecurity Leadership Game - SME Budget Allocation &amp; Quiz&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>* {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-sizing: border-box;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>min-height: 100vh;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.container {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>max-width: 1200px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0 auto;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>header {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(135deg, #1E3A8A 0%, #2563EB 100%);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 40px 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>header h1 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 2.5em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>header p {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.1em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>opacity: 0.95;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>max-width: 700px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0 auto;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.content {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 40px 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.section {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 50px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.section h2 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #1E3A8A;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.8em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-bottom: 3px solid #667eea;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding-bottom: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.poll-container {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #f8f9fa;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.poll-question {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 25px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-left: 5px solid #667eea;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.poll-question.active {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: block;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.poll-question h3 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #1E3A8A;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.3em;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.poll-option {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 12px 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #f0f4ff;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: all 0.3s;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 2px solid transparent;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.poll-option:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #e0e8ff;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-color: #667eea;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.poll-option input {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-right: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.poll-option label {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>flex: 1;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 500;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.poll-results {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #e8f4f8;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.poll-results.show {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: block;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.explanation {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #fff3cd;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-left: 4px solid #ffc107;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #856404;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.explanation strong {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #1E3A8A;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>button {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #667eea;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 12px 30px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: all 0.3s;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 10px 5px 10px 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>button:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #5568d3;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(-2px);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>button.secondary {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #6c757d;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>button.secondary:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #5a6268;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.budget-game {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #f8f9fa;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.budget-category {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 2px solid #e0e0e0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.budget-category h4 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #1E3A8A;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.1em;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.budget-category p {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #666;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 0.95em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.budget-info {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>grid-template-columns: 1fr 1fr 1fr;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 0.9em;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.budget-info-item {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #f0f4ff;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 4px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.budget-info-label {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #1E3A8A;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.budget-input-group {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.budget-input-group label {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>min-width: 100px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.budget-input-group input {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>flex: 1;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 2px solid #ddd;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 4px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1em;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.budget-input-group span {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>min-width: 80px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: right;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #1E3A8A;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.budget-summary {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #e8f4f8;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 20px 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.budget-summary h4 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #1E3A8A;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.budget-total {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: space-between;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.2em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.budget-total.valid {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #d4edda;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #155724;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.budget-total.invalid {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #f8d7da;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #721c24;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.results-container {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 3px solid #667eea;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.results-container.show {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: block;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.risk-score {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 2.5em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #1E3A8A;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #f0f4ff;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.risk-score.low {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #d4edda;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #155724;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.risk-score.medium {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #fff3cd;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #856404;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.risk-score.high {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #f8d7da;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #721c24;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.feedback-item {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-left: 5px solid;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.feedback-item.good {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #d4edda;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-color: #28a745;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #155724;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.feedback-item.warning {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #fff3cd;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-color: #ffc107;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #856404;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.feedback-item.critical {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #f8d7da;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-color: #dc3545;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #721c24;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.comparison-table {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-collapse: collapse;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.comparison-table th,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.comparison-table td {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: left;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-bottom: 1px solid #ddd;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.comparison-table th {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #1E3A8A;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.comparison-table tr:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #f8f9fa;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>@media (max-width: 768px) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>header h1 {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>font-size: 1.8em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>.budget-info {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>grid-template-columns: 1fr;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>.budget-input-group {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>align-items: stretch;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>.budget-input-group label,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>.budget-input-group span {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>min-width: auto;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;header&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h1&gt;🎮 Cybersecurity Leadership Game&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Interactive Budget Allocation Simulator &amp; Leadership Awareness Quiz&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- POLLING SECTION --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2&gt;📊 Leadership Awareness Quiz&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p style="margin-bottom: 20px; color: #666;"&gt;Test your knowledge about cybersecurity challenges in German SMEs. Answer the three questions below and compare with other participants.&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="poll-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;!-- Question 1 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="poll-question active" id="poll-1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3&gt;Question 1 of 3: What percentage of cyberattacks target SMEs in Germany?&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="poll-option"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;input type="radio" id="q1-a" name="question1" value="20"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label for="q1-a"&gt;20%&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="poll-option"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;input type="radio" id="q1-b" name="question1" value="43"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label for="q1-b"&gt;43%&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="poll-option"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;input type="radio" id="q1-c" name="question1" value="80"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label for="q1-c"&gt;80% ✓&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="poll-option"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;input type="radio" id="q1-d" name="question1" value="99"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label for="q1-d"&gt;99%&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;button onclick="submitPoll(1)"&gt;Submit Answer&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="poll-results" id="results-1"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;!-- Question 2 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="poll-question" id="poll-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3&gt;Question 2 of 3: What budget percentage should German SMEs allocate to cybersecurity?&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="poll-option"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;input type="radio" id="q2-a" name="question2" value="1-5"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label for="q2-a"&gt;1-5% (current average)&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="poll-option"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;input type="radio" id="q2-b" name="question2" value="5-10"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label for="q2-b"&gt;5-10%&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="poll-option"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;input type="radio" id="q2-c" name="question2" value="15-20"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label for="q2-c"&gt;15-20% ✓&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="poll-option"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;input type="radio" id="q2-d" name="question2" value="25-30"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label for="q2-d"&gt;25-30%&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;button onclick="submitPoll(2)"&gt;Submit Answer&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="poll-results" id="results-2"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;!-- Question 3 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="poll-question" id="poll-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3&gt;Question 3 of 3: Who is primarily responsible for establishing cybersecurity in an SME?&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="poll-option"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;input type="radio" id="q3-a" name="question3" value="IT"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label for="q3-a"&gt;IT Department&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="poll-option"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;input type="radio" id="q3-b" name="question3" value="CEO"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label for="q3-b"&gt;CEO/Top Management ✓&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="poll-option"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;input type="radio" id="q3-c" name="question3" value="CISO"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label for="q3-c"&gt;CISO alone&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="poll-option"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;input type="radio" id="q3-d" name="question3" value="Board"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label for="q3-d"&gt;Board only&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;button onclick="submitPoll(3)"&gt;Submit Answer&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="poll-results" id="results-3"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;button class="secondary" onclick="resetPolls()"&gt;Reset Quiz&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- BUDGET GAME SECTION --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2&gt;💰 Budget Allocation Game&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p style="margin-bottom: 20px; color: #666;"&gt;You are the CEO of a 150-person German SME with a €100,000 annual IT security budget. How would you allocate it across these five critical areas? Find the optimal balance to achieve the lowest risk score.&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="budget-game"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="budget-category"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h4&gt;1. Employee Security Training &amp; Awareness&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;Security awareness programs, phishing simulations, training delivery&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="budget-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="budget-info-item"&gt;&lt;span class="budget-info-label"&gt;Current Avg:&lt;/span&gt; 10-15%&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="budget-info-item"&gt;&lt;span class="budget-info-label"&gt;Recommended:&lt;/span&gt; 20-25%&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="budget-info-item"&gt;&lt;span class="budget-info-label"&gt;Criticality:&lt;/span&gt; 🔴 HIGH&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="budget-input-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label for="training"&gt;Amount:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;input type="number" id="training" min="0" max="100000" step="1000" value="22000" onchange="updateBudgetTotal()"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span id="training-pct"&gt;22%&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="budget-category"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h4&gt;2. Security Tools &amp; Technology&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;Firewalls, endpoint protection, monitoring systems, authentication&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="budget-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="budget-info-item"&gt;&lt;span class="budget-info-label"&gt;Current Avg:&lt;/span&gt; 40-45%&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="budget-info-item"&gt;&lt;span class="budget-info-label"&gt;Recommended:&lt;/span&gt; 35-40%&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="budget-info-item"&gt;&lt;span class="budget-info-label"&gt;Criticality:&lt;/span&gt; 🟡 MEDIUM&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="budget-input-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label for="tools"&gt;Amount:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;input type="number" id="tools" min="0" max="100000" step="1000" value="38000" onchange="updateBudgetTotal()"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span id="tools-pct"&gt;38%&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="budget-category"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h4&gt;3. Incident Response Planning &amp; Testing&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;IR plan development, tabletop exercises, disaster recovery testing&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="budget-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="budget-info-item"&gt;&lt;span class="budget-info-label"&gt;Current Avg:&lt;/span&gt; 5-10%&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="budget-info-item"&gt;&lt;span class="budget-info-label"&gt;Recommended:&lt;/span&gt; 15-20%&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="budget-info-item"&gt;&lt;span class="budget-info-label"&gt;Criticality:&lt;/span&gt; 🔴 HIGH (NIS2)&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="budget-input-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label for="incident-response"&gt;Amount:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;input type="number" id="incident-response" min="0" max="100000" step="1000" value="18000" onchange="updateBudgetTotal()"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span id="ir-pct"&gt;18%&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="budget-category"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h4&gt;4. External Expertise&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;Fractional CISO, managed security services, consulting&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="budget-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="budget-info-item"&gt;&lt;span class="budget-info-label"&gt;Current Avg:&lt;/span&gt; 15-20%&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="budget-info-item"&gt;&lt;span class="budget-info-label"&gt;Recommended:&lt;/span&gt; 20-25%&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="budget-info-item"&gt;&lt;span class="budget-info-label"&gt;Criticality:&lt;/span&gt; 🟡 MEDIUM&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="budget-input-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label for="expertise"&gt;Amount:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;input type="number" id="expertise" min="0" max="100000" step="1000" value="12000" onchange="updateBudgetTotal()"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span id="expertise-pct"&gt;12%&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="budget-category"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h4&gt;5. Cloud Security &amp; Backups&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;Secure backup systems, cloud infrastructure security, data protection&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="budget-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="budget-info-item"&gt;&lt;span class="budget-info-label"&gt;Current Avg:&lt;/span&gt; 10-15%&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="budget-info-item"&gt;&lt;span class="budget-info-label"&gt;Recommended:&lt;/span&gt; 15-20%&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="budget-info-item"&gt;&lt;span class="budget-info-label"&gt;Criticality:&lt;/span&gt; 🔴 HIGH&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="budget-input-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label for="backups"&gt;Amount:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;input type="number" id="backups" min="0" max="100000" step="1000" value="10000" onchange="updateBudgetTotal()"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span id="backups-pct"&gt;10%&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="budget-summary"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h4&gt;Budget Status&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="budget-total" id="budget-total"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span&gt;Total Allocated:&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span id="total-amount"&gt;€100,000&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p style="color: #666; font-size: 0.9em; margin: 10px 0 0 0;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>💡 The total must equal exactly €100,000 to calculate your risk profile.</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;button onclick="calculateRisk()" id="calculate-btn" style="width: 100%; font-size: 1.1em; padding: 15px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>📊 Calculate Risk Profile</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- RESULTS --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="results-container" id="results"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 style="color: #1E3A8A; margin-bottom: 20px; text-align: center;"&gt;Your Cybersecurity Risk Assessment&lt;/h3&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="risk-score" id="risk-score-display"&gt;Risk Score: 25&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div id="feedback-container"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h4 style="color: #1E3A8A; margin-top: 30px; margin-bottom: 15px;"&gt;Comparison with Benchmarks&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;table class="comparison-table"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;thead&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;th&gt;Allocation Type&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;th&gt;Your Allocation&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;th&gt;German SME Average&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;th&gt;Optimal Recommendation&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/thead&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;tbody id="comparison-tbody"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/tbody&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/table&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;button onclick="resetGame()" class="secondary" style="margin-top: 20px;"&gt;Reset &amp; Try Again&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Poll data</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const pollAnswers = {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>1: "80",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>2: "15-20",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>3: "CEO"</p>
+<p class="p1"><span class="Apple-converted-space">        </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const pollExplanations = {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>1: "80% of ransomware attacks in Germany specifically target SMEs. Despite their size, SMEs are prime targets for attackers who see fewer defenses.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>2: "Currently, German SMEs spend only 1-10% of IT budgets on security, far below best practice recommendations of 15-20%.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>3: "While CISOs and IT teams execute, leadership is responsible for strategy, resource allocation, governance, and driving organizational culture."</p>
+<p class="p1"><span class="Apple-converted-space">        </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Risk scoring thresholds</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const riskThresholds = {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>training: { optimal: 22000, ranges: [[20000, 24000, 0], [18000, 20000, 2], [24000, 26000, 2], [15000, 18000, 5], [26000, 28000, 5], [12000, 15000, 10], [28000, 30000, 10], [0, 12000, 15], [30000, 100000, 15]] },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>tools: { optimal: 38000, ranges: [[36000, 40000, 0], [34000, 36000, 1], [40000, 42000, 1], [31000, 34000, 3], [42000, 45000, 3], [28000, 31000, 6], [45000, 48000, 6], [0, 28000, 10], [48000, 100000, 10]] },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>ir: { optimal: 18000, ranges: [[17000, 19000, 0], [15000, 17000, 3], [19000, 21000, 3], [13000, 15000, 8], [21000, 23000, 8], [10000, 13000, 12], [23000, 26000, 12], [0, 10000, 18], [26000, 100000, 18]] },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>expertise: { optimal: 12000, ranges: [[10000, 14000, 0], [8000, 10000, 2], [14000, 16000, 2], [6000, 8000, 4], [16000, 18000, 4], [4000, 6000, 8], [18000, 20000, 8], [0, 4000, 12], [20000, 100000, 12]] },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>backups: { optimal: 10000, ranges: [[9000, 11000, 0], [7000, 9000, 3], [11000, 13000, 3], [5000, 7000, 8], [13000, 15000, 8], [3000, 5000, 12], [15000, 17000, 12], [0, 3000, 18], [17000, 100000, 18]] }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const benchmarks = {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>germanAverage: { training: 12000, tools: 42000, ir: 8000, expertise: 18000, backups: 12000 },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>optimal: { training: 22000, tools: 38000, ir: 18000, expertise: 12000, backups: 10000 }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function submitPoll(questionNum) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const selected = document.querySelector(`input[name="question${questionNum}"]:checked`);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (!selected) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>alert("Please select an answer");</p>
+<p class="p1"><span class="Apple-converted-space">                </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const correct = pollAnswers[questionNum];</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const isCorrect = selected.value === correct;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>showPollResults(questionNum, isCorrect);</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (questionNum &lt; 3) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>setTimeout(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>document.getElementById(`poll-${questionNum}`).classList.remove('active');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>document.getElementById(`poll-${questionNum + 1}`).classList.add('active');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}, 1500);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function showPollResults(questionNum, isCorrect) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const resultsDiv = document.getElementById(`results-${questionNum}`);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const correctAnswer = pollAnswers[questionNum];</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const explanation = pollExplanations[questionNum];</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>let html = `</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="explanation"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;strong&gt;${isCorrect ? '✅ CORRECT!' : '❌ Incorrect'}&lt;/strong&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;strong&gt;Correct Answer:&lt;/strong&gt; ${correctAnswer}&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;strong&gt;Insight:&lt;/strong&gt; ${explanation}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>`;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>resultsDiv.innerHTML = html;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>resultsDiv.classList.add('show');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function resetPolls() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.querySelectorAll('input[type="radio"]').forEach(radio =&gt; radio.checked = false);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.querySelectorAll('.poll-results').forEach(div =&gt; div.classList.remove('show'));</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.querySelectorAll('.poll-question').forEach(div =&gt; div.classList.remove('active'));</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('poll-1').classList.add('active');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function updateBudgetTotal() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const training = parseFloat(document.getElementById('training').value) || 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const tools = parseFloat(document.getElementById('tools').value) || 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const ir = parseFloat(document.getElementById('incident-response').value) || 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const expertise = parseFloat(document.getElementById('expertise').value) || 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const backups = parseFloat(document.getElementById('backups').value) || 0;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const total = training + tools + ir + expertise + backups;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Update percentages</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('training-pct').textContent = Math.round((training / 100000) * 100) + '%';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('tools-pct').textContent = Math.round((tools / 100000) * 100) + '%';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('ir-pct').textContent = Math.round((ir / 100000) * 100) + '%';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('expertise-pct').textContent = Math.round((expertise / 100000) * 100) + '%';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('backups-pct').textContent = Math.round((backups / 100000) * 100) + '%';</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Update total display</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const totalDiv = document.getElementById('budget-total');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('total-amount').textContent = '€' + total.toLocaleString();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (total === 100000) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>totalDiv.classList.add('valid');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>totalDiv.classList.remove('invalid');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('calculate-btn').disabled = false;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('calculate-btn').style.opacity = '1';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>totalDiv.classList.add('invalid');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>totalDiv.classList.remove('valid');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('calculate-btn').disabled = true;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('calculate-btn').style.opacity = '0.5';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function getPenalty(value, category) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const ranges = riskThresholds[category].ranges;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>for (let range of ranges) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (value &gt;= range[0] &amp;&amp; value &lt;= range[1]) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>return range[2];</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>return 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function calculateRisk() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const training = parseFloat(document.getElementById('training').value);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const tools = parseFloat(document.getElementById('tools').value);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const ir = parseFloat(document.getElementById('incident-response').value);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const expertise = parseFloat(document.getElementById('expertise').value);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const backups = parseFloat(document.getElementById('backups').value);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>let score = 25;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>score += getPenalty(training, 'training');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>score += getPenalty(tools, 'tools');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>score += getPenalty(ir, 'ir');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>score += getPenalty(expertise, 'expertise');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>score += getPenalty(backups, 'backups');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Cap between 15 and 99</p>
+<p class="p1"><span class="Apple-converted-space">            </span>score = Math.max(15, Math.min(99, score));</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>displayResults(score, training, tools, ir, expertise, backups);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function displayResults(score, training, tools, ir, expertise, backups) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const riskDiv = document.getElementById('risk-score-display');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let riskLevel = 'low';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let riskText = 'EXCELLENT RISK PROFILE';</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (score &gt; 70) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>riskLevel = 'high';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>riskText = 'CRITICAL RISK GAPS';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else if (score &gt; 45) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>riskLevel = 'medium';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>riskText = 'RISKY - SOME GAPS';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>riskDiv.textContent = `Risk Score: ${score}`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>riskDiv.className = `risk-score ${riskLevel}`;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Generate feedback</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let feedback = '';</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const trainingOpt = benchmarks.optimal.training;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (training &lt; trainingOpt - 4000) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>feedback += `&lt;div class="feedback-item critical"&gt;🔴 &lt;strong&gt;CRITICAL:&lt;/strong&gt; Training budget is critically low. Human error causes 80%+ of incidents. Consider increasing to €20k-€24k.&lt;/div&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else if (training &lt; trainingOpt - 2000) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>feedback += `&lt;div class="feedback-item warning"&gt;⚠️ &lt;strong&gt;WARNING:&lt;/strong&gt; Employee awareness is underfunded. This is a key vulnerability in most SMEs.&lt;/div&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else if (training &gt;= trainingOpt - 2000 &amp;&amp; training &lt;= trainingOpt + 2000) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>feedback += `&lt;div class="feedback-item good"&gt;✅ &lt;strong&gt;GOOD:&lt;/strong&gt; Strong investment in human factor. You're addressing a key vulnerability.&lt;/div&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const irOpt = benchmarks.optimal.ir;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (ir &lt; irOpt - 3000) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>feedback += `&lt;div class="feedback-item critical"&gt;🔴 &lt;strong&gt;CRITICAL:&lt;/strong&gt; Incident Response is critically underfunded. NIS2 requires 24-hour incident reporting. You face regulatory risk (penalties up to €10M).&lt;/div&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else if (ir &lt; irOpt - 1000) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>feedback += `&lt;div class="feedback-item warning"&gt;⚠️ &lt;strong&gt;WARNING:&lt;/strong&gt; Your IR capability is limited. NIS2 compliance requires robust incident response planning.&lt;/div&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else if (ir &gt;= irOpt - 1000 &amp;&amp; ir &lt;= irOpt + 2000) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>feedback += `&lt;div class="feedback-item good"&gt;✅ &lt;strong&gt;GOOD:&lt;/strong&gt; Prepared for incidents. Your response and recovery capabilities are strong.&lt;/div&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const backupsOpt = benchmarks.optimal.backups;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (backups &lt; backupsOpt - 1000) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>feedback += `&lt;div class="feedback-item critical"&gt;🔴 &lt;strong&gt;CRITICAL:&lt;/strong&gt; Ransomware is the #1 threat to SMEs (80% of attacks). Without secure backups, one attack could destroy your company.&lt;/div&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else if (backups &gt;= backupsOpt &amp;&amp; backups &lt;= backupsOpt + 3000) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>feedback += `&lt;div class="feedback-item good"&gt;✅ &lt;strong&gt;GOOD:&lt;/strong&gt; Strong backup and recovery capability. You're protected against ransomware.&lt;/div&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const toolsOpt = benchmarks.optimal.tools;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (tools &lt; toolsOpt - 7000) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>feedback += `&lt;div class="feedback-item critical"&gt;🔴 &lt;strong&gt;CRITICAL:&lt;/strong&gt; Technical controls are insufficient. Ransomware and data breaches will likely succeed.&lt;/div&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else if (tools &gt;= toolsOpt - 3000 &amp;&amp; tools &lt;= toolsOpt + 3000) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>feedback += `&lt;div class="feedback-item good"&gt;✅ &lt;strong&gt;GOOD:&lt;/strong&gt; Solid technical foundation. Monitoring and controls are in place.&lt;/div&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const expertiseOpt = benchmarks.optimal.expertise;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (expertise &lt; expertiseOpt - 2000) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>feedback += `&lt;div class="feedback-item warning"&gt;⚠️ &lt;strong&gt;WARNING:&lt;/strong&gt; Without external expertise, your small IT team lacks specialized security knowledge needed for NIS2.&lt;/div&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else if (expertise &gt;= expertiseOpt - 1000 &amp;&amp; expertise &lt;= expertiseOpt + 2000) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>feedback += `&lt;div class="feedback-item good"&gt;✅ &lt;strong&gt;GOOD:&lt;/strong&gt; You're leveraging external expertise. This helps SMEs compete with larger companies.&lt;/div&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('feedback-container').innerHTML = feedback;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Comparison table</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let tableHtml = `</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td&gt;&lt;strong&gt;Training &amp; Awareness&lt;/strong&gt;&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td&gt;€${training.toLocaleString()} (${Math.round((training/100000)*100)}%)&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td&gt;€${benchmarks.germanAverage.training.toLocaleString()} (${Math.round((benchmarks.germanAverage.training/100000)*100)}%)&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td&gt;€${benchmarks.optimal.training.toLocaleString()} (${Math.round((benchmarks.optimal.training/100000)*100)}%)&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td&gt;&lt;strong&gt;Security Tools&lt;/strong&gt;&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td&gt;€${tools.toLocaleString()} (${Math.round((tools/100000)*100)}%)&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td&gt;€${benchmarks.germanAverage.tools.toLocaleString()} (${Math.round((benchmarks.germanAverage.tools/100000)*100)}%)&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td&gt;€${benchmarks.optimal.tools.toLocaleString()} (${Math.round((benchmarks.optimal.tools/100000)*100)}%)&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td&gt;&lt;strong&gt;Incident Response&lt;/strong&gt;&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td&gt;€${ir.toLocaleString()} (${Math.round((ir/100000)*100)}%)&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td&gt;€${benchmarks.germanAverage.ir.toLocaleString()} (${Math.round((benchmarks.germanAverage.ir/100000)*100)}%)&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td&gt;€${benchmarks.optimal.ir.toLocaleString()} (${Math.round((benchmarks.optimal.ir/100000)*100)}%)&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td&gt;&lt;strong&gt;External Expertise&lt;/strong&gt;&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td&gt;€${expertise.toLocaleString()} (${Math.round((expertise/100000)*100)}%)&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td&gt;€${benchmarks.germanAverage.expertise.toLocaleString()} (${Math.round((benchmarks.germanAverage.expertise/100000)*100)}%)&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td&gt;€${benchmarks.optimal.expertise.toLocaleString()} (${Math.round((benchmarks.optimal.expertise/100000)*100)}%)&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td&gt;&lt;strong&gt;Cloud &amp; Backups&lt;/strong&gt;&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td&gt;€${backups.toLocaleString()} (${Math.round((backups/100000)*100)}%)&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td&gt;€${benchmarks.germanAverage.backups.toLocaleString()} (${Math.round((benchmarks.germanAverage.backups/100000)*100)}%)&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td&gt;€${benchmarks.optimal.backups.toLocaleString()} (${Math.round((benchmarks.optimal.backups/100000)*100)}%)&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>`;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('comparison-tbody').innerHTML = tableHtml;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('results').classList.add('show');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('results').scrollIntoView({ behavior: 'smooth' });</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function resetGame() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('training').value = 22000;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('tools').value = 38000;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('incident-response').value = 18000;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('expertise').value = 12000;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('backups').value = 10000;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>updateBudgetTotal();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('results').classList.remove('show');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>window.scrollTo({ top: 0, behavior: 'smooth' });</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Initialize on load</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.addEventListener('DOMContentLoaded', function() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>updateBudgetTotal();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
